@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+A{
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 92px;
+    background-color: #CF2B2B;
+    align-items: center;
+}
+header h1{
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+    color: #FFFFFF;
+    padding: 8px 21px 5px; 
+}
+header p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 0px 21px 18px; 
+}
+
+.container{
+    margin-top: 92px;
+    padding: 31px 0 0 19px;
+}
+
+.titulo p{
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    color: #333333;
+    margin-bottom: 17px;
+}
+.pratos{
+    display: flex;
+    overflow-x: hidden;
+    
+}
+.prato{ 
+    width: 172px;
+    height: 216px;
+    background-color: blue;
+    margin-left: 16px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 92px;
+    background-color: #CF2B2B;
+}
+.botao-pedido{
+    display: flex;
+    align-items: center;
+    width: 364px;
+    height: 61px;
+    padding: 0 80px;
+    margin: 15px auto;
+    background-color: #CBCBCB;
+    border-radius: 50px;
+
+}
+.botao-pedido p {
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap');
