@@ -5,6 +5,10 @@ A{
     text-decoration: none;
 }
 
+body{
+    background: #E5E5E5;
+}
+
 header{
     position: fixed;
     top: 0;
@@ -28,10 +32,12 @@ header p{
 }
 
 .container{
-    margin-top: 92px;
+    margin: 92px 0;
     padding: 31px 0 0 19px;
 }
-
+.escolha-prato{
+    overflow: hidden;
+}
 .titulo p{
     font-family: 'Righteous', cursive;
     font-size: 26px;
@@ -40,14 +46,43 @@ header p{
 }
 .pratos{
     display: flex;
-    overflow-x: hidden;
-    
+    width: 100%;  
+    margin-bottom: 27px;  
 }
 .prato{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 172px;
     height: 216px;
-    background-color: blue;
-    margin-left: 16px;
+    margin-right: 16px;
+    padding: 18px 14px 13px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+.prato img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+.prato-nome p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+.prato-descricao p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #A6A6A6;
+}
+.prato-preco p{
+    display: flex;
+    align-items: end;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 footer{
