@@ -36,7 +36,7 @@ header p{
     padding: 31px 0 0 19px;
 }
 .escolha-prato{
-    overflow: hidden;
+    overflow: scroll;
 }
 .titulo p{
     font-family: 'Righteous', cursive;
