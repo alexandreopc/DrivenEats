@@ -146,9 +146,11 @@ footer{
 
 
 
-/*------------------------------------------*/
+
+/*------------------- interacao -----------------------*/
 .selecionado{
-    background-color: #28A745;
-    color: #FFF;
+    box-shadow: 0px 0px 0px 5px #32B72F inset;    
 }
+
+/*------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap');
