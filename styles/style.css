@@ -6,10 +6,13 @@ A{
 }
 
 body{
+    position: relative;
     background: #E5E5E5;
 }
 
+/*------------------- header -----------------------*/
 header{
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -31,7 +34,10 @@ header p{
     padding: 0px 21px 18px; 
 }
 
+/*------------------- main -----------------------*/
 .container{
+    display: none;
+    flex-direction: column;
     margin: 92px 0;
     padding: 31px 0 0 19px;
 }
@@ -85,6 +91,7 @@ header p{
     font-size: 16px;
 }
 
+/*------------------- footer -----------------------*/
 footer{
     position: fixed;
     bottom: 0;
@@ -112,4 +119,32 @@ footer{
 
 }
 
+/*------------------- tela de finalizacao -----------------------*/
+.tela-finalizacao{
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.caixa{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 377px;
+    height: 353px;
+    padding: 21px 25px 0;
+    top: calc(50% - 352px/2);
+    left: calc(50% - 376px/2);
+    background-color: #50D074;
+    box-shadow: 0px 0px 10px 1px #00000040;
+    border-radius: 9px;
+}
+
+
+
+/*------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap');
