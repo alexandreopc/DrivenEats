@@ -111,17 +111,32 @@ footer{
     border-radius: 50px;
 
 }
-.botao-pedido p {
-    
+.botao-pedido p, .botao-finalizar-pedido p {
+    margin: 0 auto;
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
     color: #FFFFFF;
+    font-size: 20px;
+}
+.botao-pedido p{
+    font-weight: 400;
+}
+.botao-finalizar-pedido p{
+    font-weight: 700;
+}
 
+.botao-finalizar-pedido{
+    display: flex;
+    align-items: center;
+    width: 364px;
+    height: 61px;
+    padding: 0 80px;
+    margin: 15px auto;
+    background-color: #32B72F;
+    border-radius: 50px;
 }
 
 /*------------------- tela de finalizacao -----------------------*/
 .tela-finalizacao{
-    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -134,23 +149,58 @@ footer{
     display: flex;
     flex-direction: column;
     position: absolute;
+    justify-content: space-between;
     width: 377px;
     height: 353px;
-    padding: 21px 25px 0;
+    padding: 21px 25px 2px;
     top: calc(50% - 352px/2);
     left: calc(50% - 376px/2);
     background-color: #50D074;
     box-shadow: 0px 0px 10px 1px #00000040;
     border-radius: 9px;
 }
+.finalizar-pedido{
+    display: flex;
+    align-items: center;
+    width: 329px;
+    height: 52px;
+    margin: 15px auto;
+    background-color: #FFF;
+    border-radius: 50px;
+}
+.cancelar{
+    display: flex;
+    align-items: center;
+    width: 329px;
+    height: 52px;
+    margin: 0px auto;
+    background-color:#50D074;
+    border-radius: 50px;
+    border-color: #50D074;
 
-
+}
+.finalizar-pedido p, .cancelar p {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+.finalizar-pedido p{
+    color: #50D074;
+    font-size: 22px;
+    font-weight: 700;
+}
+.cancelar p{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+}
 
 
 /*------------------- interacao -----------------------*/
 .selecionado{
     box-shadow: 0px 0px 0px 5px #32B72F inset;    
 }
-
+.escondido {
+    display: none;
+}
 /*------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap');

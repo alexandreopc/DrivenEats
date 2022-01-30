@@ -156,7 +156,7 @@
                 </div>
             </div>  
         </div>
-        <div class="tela-finalizacao">
+        <div class="tela-finalizacao escondido">
             <div class="caixa">
                 <span>Confirme seu pedido</span>
                 <div class="pedidos">
@@ -165,8 +165,12 @@
                     <div>3</div>
                 </div>
                 <div class="total">TOTAL</div>
-                <button class="finalizar-pedido">Tudo certo, pode pedir!</button>
-                <button class="cancelar">Cancelar</button>
+                <button class="finalizar-pedido" onclick="finalizarPedido()" style="cursor: pointer">
+                    <p>Tudo certo, pode pedir!</p>
+                </button>
+                <button class="cancelar" onclick="cacelarPedido()" style="cursor: pointer">
+                    <p>Cancelar</p>
+                </button>
             </div>
         </div>
     </main>
@@ -174,6 +178,9 @@
     <footer>
         <button class="botao-pedido">
             <p>Selecione os 3 itens para fechar o pedido</p>
+        </button>
+        <button class="botao-finalizar-pedido escondido" onclick="fecharPedido()" style="cursor: pointer">
+            <p>Fechar pedido</p>
         </button>
     </footer>
 

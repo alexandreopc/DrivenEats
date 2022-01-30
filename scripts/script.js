@@ -16,6 +16,9 @@ function selecionarPrato(nomePrato) {
     prato = nomePrato;
   } 
   console.log(prato);
+  if(prato!=null && bebida!=null && sobremesa!=null){
+    BotaoFecharPedido();
+  }
 }//como adicionar funcao de clicar de novo e deselecionar
 
 /*
@@ -58,6 +61,9 @@ function selecionarBebida(nomeBebida) {
     bebida = nomeBebida;
   } 
   console.log(bebida);
+  if(prato!=null && bebida!=null && sobremesa!=null){
+    BotaoFecharPedido();
+  }
 }
 
 function selecionarSobremesa(nomeSobremesa) {
@@ -79,5 +85,29 @@ function selecionarSobremesa(nomeSobremesa) {
 }
 
 function BotaoFecharPedido(){
+  let botao1 = document.querySelector(".botao-finalizar-pedido");
+  botao1.classList.remove("escondido");
 
+  let botao2 = document.querySelector(".botao-pedido");
+  botao2.classList.add("escondido");
+}
+
+function fecharPedido(){
+  let tela1 = document.querySelector(".tela-finalizacao");
+  tela1.classList.remove("escondido");
+
+  let tela2 = document.querySelector(".container");
+  tela2.classList.add("escondido");
+}
+
+function finalizarPedido(){
+  alert("bao dms");
+}
+
+function cacelarPedido(){
+  let tela1 = document.querySelector(".tela-finalizacao");
+  tela1.classList.add("escondido");
+
+  let tela2 = document.querySelector(".container");
+  tela2.classList.remove("escondido");
 }
