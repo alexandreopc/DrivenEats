@@ -20,48 +20,27 @@ function selecionarPrato(nomePrato) {
   pratoValor = bloco2.innerHTML;
   console.log(pratoValor);
   
-  let selecionado = document.querySelector(".pratos .selecionado"); //caminho certo? eu coloquei o ALL dps
+  let selecionado = document.querySelector(".pratos .selecionado");
+  let selecionado2 = document.querySelector(".pratos .selecionado .icone");
+  
   if(prato != null) { 
-    selecionado.classList.remove("selecionado"); 
+    selecionado.classList.remove("selecionado");
+    selecionado2.classList.add("escondido"); 
+    //document.querySelector(".pratos .selecionado .icone").classList.add("escondido"); pq nao esse?
     prato = null;
   }
   let bloco3 = document.querySelector("."+nomePrato);
   if(prato==null){
     bloco3.classList.add("selecionado"); 
+    //selecionado2.classList.remove("escondido");
+    document.querySelector(".pratos .selecionado .icone").classList.remove("escondido");
     prato = nomePrato;
   } 
   if(prato!=null && bebida!=null && sobremesa!=null){
     BotaoFecharPedido();
   }
-}//como adicionar funcao de clicar de novo e deselecionar
+}
 
-/*
-let selecionado = document.querySelector(".prato .selecionado"); //caminho certo? eu coloquei o ALL dps
-  //let possuiClasse = selecionado.classList.contains("selecionado");
-  if(prato != null) { 
-    selecionado.classList.remove("selecionado"); 
-    prato = null;//quando comento essa linha nao consigo selecionar mias de um prato
-  }
-  let bloco = document.querySelector("."+nomePrato);
-  if(prato==null){
-    bloco.classList.add("selecionado"); 
-    prato = nomePrato;
-  } 
-  console.log(prato);
-
--------------------------------------------------------------
-
-const selecionado = document.querySelector("."+nomePrato .selecionado);
-  if(selecionado !== null) { //achar o jeito funcionar com remove e add
-    selecionado.classList.remove("selecionado"); //.add
-    prato = null;
-  }
-  const bloco = document.querySelector("."+nomePrato)//da pra colocar .nomeComida 
-  if(prato==null){
-    bloco.classList.add("selecionado"); //.add
-    prato = nomePrato;
-  } 
-*/
 function selecionarBebida(nomeBebida) {
   let bloco = document.querySelector("."+ nomeBebida +" .bebida-nome p");
   bebidaNome = bloco.innerHTML;
@@ -157,7 +136,7 @@ function cacelarPedido(){
 }
 
 function gerarLink(){
-  let mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${pratoNome}\n- Bebida: ${bebidaNome}\n- Sobremesa: ${sobremesaNome}\nTotal: R$ ${total}\n\n\nNome: ${nomeUsuario}\nEndereco: ${enderecoUsuario}`;
+  let mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${pratoNome}\n- Bebida: ${bebidaNome}\n- Sobremesa: ${sobremesaNome}\nTotal: R$ ${total}\n\nNome: ${nomeUsuario}\nEndereco: ${enderecoUsuario}`;
   let link = `https://wa.me/5562996766076?text=${encodeURIComponent(mensagem)}`;
   window.open(link);
 }
