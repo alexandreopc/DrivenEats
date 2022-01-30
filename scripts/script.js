@@ -14,15 +14,12 @@ let enderecoUsuario;
 function selecionarPrato(nomePrato) {
   let bloco = document.querySelector("."+ nomePrato +" .prato-nome p");
   pratoNome = bloco.innerHTML;
-  console.log(pratoNome);
   
   let bloco2 = document.querySelector("."+ nomePrato +" .prato-preco span");
   pratoValor = bloco2.innerHTML;
-  console.log(pratoValor);
-  
+
   let selecionado = document.querySelector(".pratos .selecionado");
   let selecionado2 = document.querySelector(".pratos .selecionado .icone");
-  
   if(prato != null) { 
     selecionado.classList.remove("selecionado");
     selecionado2.classList.add("escondido"); 
@@ -32,7 +29,7 @@ function selecionarPrato(nomePrato) {
   let bloco3 = document.querySelector("."+nomePrato);
   if(prato==null){
     bloco3.classList.add("selecionado"); 
-    //selecionado2.classList.remove("escondido");
+    //selecionado2.classList.remove("escondido"); pq nao esse?
     document.querySelector(".pratos .selecionado .icone").classList.remove("escondido");
     prato = nomePrato;
   } 
@@ -44,20 +41,21 @@ function selecionarPrato(nomePrato) {
 function selecionarBebida(nomeBebida) {
   let bloco = document.querySelector("."+ nomeBebida +" .bebida-nome p");
   bebidaNome = bloco.innerHTML;
-  console.log(bebidaNome);
   
   let bloco2 = document.querySelector("."+ nomeBebida +" .bebida-preco span");
   bebidaValor = bloco2.innerHTML;
-  console.log(bebidaValor);
 
-  let selecionado = document.querySelector(".bebidas .selecionado"); //caminho certo? eu coloquei o ALL dps
+  let selecionado = document.querySelector(".bebidas .selecionado");
+  let selecionado2 = document.querySelector(".bebidas .selecionado .icone");
   if(bebida != null) { 
     selecionado.classList.remove("selecionado"); 
+    selecionado2.classList.add("escondido"); 
     bebida = null;
   }
   let bloco3 = document.querySelector("."+nomeBebida);
   if(bebida==null){
     bloco3.classList.add("selecionado"); 
+    document.querySelector(".bebidas .selecionado .icone").classList.remove("escondido");
     bebida = nomeBebida;
   } 
   if(prato!=null && bebida!=null && sobremesa!=null){
@@ -68,20 +66,21 @@ function selecionarBebida(nomeBebida) {
 function selecionarSobremesa(nomeSobremesa) {
   let bloco = document.querySelector("."+ nomeSobremesa +" .sobremesa-nome p");
   sobremesaNome = bloco.innerHTML;
-  console.log(sobremesaNome);
-  
+
   let bloco2 = document.querySelector("."+ nomeSobremesa +" .sobremesa-preco span");
   sobremesaValor = bloco2.innerHTML;
-  console.log(sobremesaValor);
 
-  let selecionado = document.querySelector(".sobremesas .selecionado"); //caminho certo? eu coloquei o ALL dps
+  let selecionado = document.querySelector(".sobremesas .selecionado"); 
+  let selecionado2 = document.querySelector(".sobremesas .selecionado .icone");
   if(sobremesa != null) { 
     selecionado.classList.remove("selecionado"); 
+    selecionado2.classList.add("escondido"); 
     sobremesa = null;
   }
   let bloco3 = document.querySelector("."+nomeSobremesa);
   if(sobremesa==null){
-    bloco3.classList.add("selecionado"); 
+    bloco3.classList.add("selecionado");
+    document.querySelector(".sobremesas .selecionado .icone").classList.remove("escondido");
     sobremesa = nomeSobremesa;
   } 
   if(prato!=null && bebida!=null && sobremesa!=null){
@@ -98,7 +97,6 @@ function BotaoFecharPedido(){
   
   total = (parseFloat(pratoValor.replace(",",".")) + parseFloat(bebidaValor.replace(",",".")) + parseFloat(sobremesaValor.replace(",","."))).toFixed(2);;
   total = total.replace(".",",");
-  console.log(total);
 }
 
 function fecharPedido(){
