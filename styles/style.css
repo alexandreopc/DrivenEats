@@ -159,6 +159,26 @@ footer{
     box-shadow: 0px 0px 10px 1px #00000040;
     border-radius: 9px;
 }
+.caixa span, .total p{
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFF;
+}
+.pedidos p{
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #FFF;
+}
+.total {
+    display: flex;
+    
+    
+}
+
 .finalizar-pedido{
     display: flex;
     align-items: center;
