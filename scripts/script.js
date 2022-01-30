@@ -8,11 +8,12 @@ let sobremesa = null;
 let sobremesaNome = null;
 let sobremesaValor;
 let total = 0;
-
+let nomeUsuario; 
+let enderecoUsuario;
 
 function selecionarPrato(nomePrato) {
   let bloco = document.querySelector("."+ nomePrato +" .prato-nome p");
-  let pratoNome = bloco.innerHTML;
+  pratoNome = bloco.innerHTML;
   console.log(pratoNome);
   
   let bloco2 = document.querySelector("."+ nomePrato +" .prato-preco span");
@@ -63,7 +64,7 @@ const selecionado = document.querySelector("."+nomePrato .selecionado);
 */
 function selecionarBebida(nomeBebida) {
   let bloco = document.querySelector("."+ nomeBebida +" .bebida-nome p");
-  let bebidaNome = bloco.innerHTML;
+  bebidaNome = bloco.innerHTML;
   console.log(bebidaNome);
   
   let bloco2 = document.querySelector("."+ nomeBebida +" .bebida-preco span");
@@ -87,7 +88,7 @@ function selecionarBebida(nomeBebida) {
 
 function selecionarSobremesa(nomeSobremesa) {
   let bloco = document.querySelector("."+ nomeSobremesa +" .sobremesa-nome p");
-  let sobremesaNome = bloco.innerHTML;
+  sobremesaNome = bloco.innerHTML;
   console.log(sobremesaNome);
   
   let bloco2 = document.querySelector("."+ nomeSobremesa +" .sobremesa-preco span");
@@ -122,18 +123,29 @@ function BotaoFecharPedido(){
 }
 
 function fecharPedido(){
-  /*
+  nomeUsuario = prompt("Qual seu nome?");
+  enderecoUsuario = prompt("Qual o endereco de entrega?");
+  
   let tela1 = document.querySelector(".tela-finalizacao");
   tela1.classList.remove("escondido");
 
   let tela2 = document.querySelector(".container");
   tela2.classList.add("escondido");
-  */
 
+  document.querySelectorAll(".pedido-valor")[0].children[0].innerHTML = `${pratoNome}`;
+  document.querySelectorAll(".pedido-valor")[0].children[1].innerHTML = `R$ ${pratoValor}`;
+  
+  document.querySelectorAll(".pedido-valor")[1].children[0].innerHTML = `${bebidaNome}`;
+  document.querySelectorAll(".pedido-valor")[1].children[1].innerHTML = `R$ ${bebidaValor}`;
+
+  document.querySelectorAll(".pedido-valor")[2].children[0].innerHTML = `${sobremesaNome}`;
+  document.querySelectorAll(".pedido-valor")[2].children[1].innerHTML = `R$ ${sobremesaValor}`;
+
+  document.querySelectorAll(".pedido-valor")[3].children[1].innerHTML = `R$ ${total}`;
 }
 
 function finalizarPedido(){
-  alert("bao dms");
+  alert(gerarLink());
 }
 
 function cacelarPedido(){
@@ -145,17 +157,7 @@ function cacelarPedido(){
 }
 
 function gerarLink(){
-  const inicio = "https://wa.me/5562996766076?text=";
-  let mensagem = "Olá, gostaria de fazer o pedido:\n- Prato: "+ prato +"\n- Bebida: "+ bebida +"\n- Sobremesa: "+ sobremesa +"\nTotal: "+ total;
-  let soma;
-}
-
-function teste(){
-  let bloco = document.querySelector("."+ nomePrato +" .prato-nome p");
-  let pratoNome = bloco.innerHTML;
-  console.log(pratoNome);
-  
-  let bloco2 = document.querySelector("."+ nomePrato +" .prato-preco p");
-  pratoValor = bloco2.innerHTML;
-  console.log(pratoValor);
+  let mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${pratoNome}\n- Bebida: ${bebidaNome}\n- Sobremesa: ${sobremesaNome}\nTotal: R$ ${total}\n\n\nNome: ${nomeUsuario}\nEndereco: ${enderecoUsuario}`;
+  let link = `https://wa.me/5562996766076?text=${encodeURIComponent(mensagem)}`;
+  window.open(link);
 }

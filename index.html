@@ -160,20 +160,31 @@
             <div class="caixa">
                 <span>Confirme seu pedido</span>
                 <div class="pedidos">
-                    <p>1</p>
-                    <p>2</p>
-                    <p>3</p>
+                    <div class="pedido-valor">
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="pedido-valor">
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="pedido-valor">
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="pedido-valor total">
+                        <p>Total</p>
+                        <p></p>
+                    </div>
                 </div>
-                <div class="total">
-                    <p>Total</p>
-                    <p>R$ </p>
+                <div class="botoes">
+                    <button class="finalizar-pedido" onclick="finalizarPedido()" style="cursor: pointer">
+                        <a href=""><p>Tudo certo, pode pedir!</p></a>
+                    </button>
+                    <button class="cancelar" onclick="cacelarPedido()" style="cursor: pointer">
+                        <p>Cancelar</p>
+                    </button>
                 </div>
-                <button class="finalizar-pedido" onclick="finalizarPedido()" style="cursor: pointer">
-                    <p>Tudo certo, pode pedir!</p>
-                </button>
-                <button class="cancelar" onclick="cacelarPedido()" style="cursor: pointer">
-                    <p>Cancelar</p>
-                </button>
             </div>
         </div>
     </main>

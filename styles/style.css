@@ -159,45 +159,46 @@ footer{
     box-shadow: 0px 0px 10px 1px #00000040;
     border-radius: 9px;
 }
-.caixa span, .total p{
+.caixa span{
     margin: 0 auto;
+    margin-bottom: 28px;
+}
+.caixa span{
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     font-weight: 700;
     color: #FFF;
 }
+.pedidos{
+    margin-bottom: 24px;
+}
 .pedidos p{
-    margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     font-weight: 400;
     color: #FFF;
 }
-.total {
+.pedido-valor{
     display: flex;
-    
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+.total p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFF; 
+}
+.botoes{
     
 }
-
 .finalizar-pedido{
-    display: flex;
-    align-items: center;
     width: 329px;
     height: 52px;
-    margin: 15px auto;
+    margin: 0 auto;
     background-color: #FFF;
     border-radius: 50px;
-}
-.cancelar{
-    display: flex;
-    align-items: center;
-    width: 329px;
-    height: 52px;
-    margin: 0px auto;
-    background-color:#50D074;
-    border-radius: 50px;
-    border-color: #50D074;
-
+    border-style: none;
 }
 .finalizar-pedido p, .cancelar p {
     margin: 0 auto;
@@ -207,6 +208,16 @@ footer{
     color: #50D074;
     font-size: 22px;
     font-weight: 700;
+}
+.cancelar{
+    width: 329px;
+    height: 52px;
+    margin: 0px auto;
+    background-color:#50D074;
+    border-radius: 50px;
+    border-color: #50D074;
+    border-style: none;
+
 }
 .cancelar p{
     color: #FFF;
@@ -222,5 +233,9 @@ footer{
 .escondido {
     display: none;
 }
+.pedidos{
+    
+}
+
 /*------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap');
