@@ -23,7 +23,20 @@
                     <p>Primeiro, seu prato</p>
                 </div>
                 <div class="pratos" data-identifier="dishes">
-                    <div class="prato" data-identifier="food-option" onclick="selecionarPrato('Frango Yin Yang')" style="cursor: pointer">
+                    <div class="carne prato" data-identifier="food-option" onclick="selecionarPrato('carne')" style="cursor: pointer">
+                        <img src="imagens/frango_yin_yang 1.png" alt="">  <!--ARRUMAR DIV PRATO PARA NOME -->
+                        <div class="prato-nome" data-identifier="food-title">
+                            <p>Frango Yin Yang</p>
+                        </div>
+                        <div class="prato-descricao">
+                            <p>Um pouco de batata, um pouco de salada</p>
+                        </div>
+                        <div class="prato-preco" data-identifier="food-price">
+                            <p>R$ 15,90</p>
+                        </div>
+                    </div>
+                    
+                    <div class="frango prato" data-identifier="food-option" onclick="selecionarPrato('frango')" style="cursor: pointer">
                         <img src="imagens/frango_yin_yang 1.png" alt="">
                         <div class="prato-nome" data-identifier="food-title">
                             <p>Frango Yin Yang</p>
@@ -36,20 +49,7 @@
                         </div>
                     </div>
 
-                    <div class="prato" data-identifier="food-option">
-                        <img src="imagens/frango_yin_yang 1.png" alt="">
-                        <div class="prato-nome" data-identifier="food-title">
-                            <p>Frango Yin Yang</p>
-                        </div>
-                        <div class="prato-descricao">
-                            <p>Um pouco de batata, um pouco de salada</p>
-                        </div>
-                        <div class="prato-preco" data-identifier="food-price">
-                            <p>R$ 15,90</p>
-                        </div>
-                    </div>
-
-                    <div class="prato" data-identifier="food-option">
+                    <div class="veg prato" data-identifier="food-option" onclick="selecionarPrato('veg')" style="cursor: pointer">
                         <img src="imagens/frango_yin_yang 1.png" alt="">
                         <div class="prato-nome" data-identifier="food-title">
                             <p>Frango Yin Yang</p>
@@ -69,7 +69,7 @@
                     <p>Agora, sua bebida</p>
                 </div>
                 <div class="bebidas" data-identifier="drinks">
-                    <div class="bebida" data-identifier="food-option">
+                    <div class="bebida coca" data-identifier="food-option" onclick="selecionarBebida('coca')" style="cursor: pointer">
                         <img src="imagens/frango_yin_yang 1.png" alt="">
                         <div class="bebida-nome" data-identifier="food-title">
                             <p>Coquinha gelada</p>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
 
-                    <div class="bebida" data-identifier="food-option">
+                    <div class="bebida nana" data-identifier="food-option" onclick="selecionarBebida('nana')" style="cursor: pointer">
                         <img src="imagens/frango_yin_yang 1.png" alt="">
                         <div class="bebida-nome" data-identifier="food-title">
                             <p>Coquinha gelada</p>
@@ -95,7 +95,7 @@
                         </div>
                     </div>
 
-                    <div class="bebida" data-identifier="food-option">
+                    <div class="bebida agua" data-identifier="food-option" onclick="selecionarBebida('agua')" style="cursor: pointer">
                         <img src="imagens/frango_yin_yang 1.png" alt="">
                         <div class="bebida-nome" data-identifier="food-title">
                             <p>Coquinha gelada</p>
@@ -115,7 +115,7 @@
                     <p>Por fim, sua sobremesa</p>
                 </div>
                 <div class="sobremesas" data-identifier="desserts">
-                    <div class="sobremesa" data-identifier="food-option">
+                    <div class="sobremesa pudim" data-identifier="food-option" onclick="selecionarSobremesa('pudim')" style="cursor: pointer">
                         <img src="imagens/frango_yin_yang 1.png" alt="">
                         <div class="sobremesa-nome" data-identifier="food-title">
                             <p>Pudim</p>
@@ -128,7 +128,7 @@
                         </div>
                     </div>
 
-                    <div class="sobremesa" data-identifier="food-option">
+                    <div class="sobremesa bolo" data-identifier="food-option" onclick="selecionarSobremesa('bolo')" style="cursor: pointer">
                         <img src="imagens/frango_yin_yang 1.png" alt="">
                         <div class="sobremesa-nome" data-identifier="food-title">
                             <p>Pudim</p>
@@ -141,7 +141,7 @@
                         </div>
                     </div>
 
-                    <div class="sobremesa" data-identifier="food-option">
+                    <div class="sobremesa sorvete" data-identifier="food-option" onclick="selecionarSobremesa('sorvete')" style="cursor: pointer">
                         <img src="imagens/frango_yin_yang 1.png" alt="">
                         <div class="sobremesa-nome" data-identifier="food-title">
                             <p>Pudim</p>
